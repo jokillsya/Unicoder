@@ -1,28 +1,28 @@
 package za.co.bbd.unicoder;
 
 /************************************************************************
-*																		*
-* Unicoder - Main.java													*
-* 																		*
-* Converts every character in all java source files into their unicode	*
-* shorthand equivalents - the code should still compile after the 		*
-* conversion.															*
-* 																		*
-* Copyright (C) 2012 - Riaan Van Rooyen & Johnathan Botha				*
-*																		*
-* This program is free software: you can redistribute it and/or modify	*
-* it under the terms of the GNU General Public License as published by	*
-* the Free Software Foundation, either version 3 of the License, or		*
-* (at your option) any later version.									*
-*																		*
-* This program is distributed in the hope that it will be useful,		*
-* but WITHOUT ANY WARRANTY; without even the implied warranty of		*
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the			*
-* GNU General Public License for more details.							*
-* 																		*
-* You should have received a copy of the GNU General Public License		*
-* along with this program.  If not, see <http://www.gnu.org/licenses/>.	*
-* 																		*
+*																		
+* Unicoder - Main.java													
+* 																		
+* Converts every character in all java source files into their unicode	
+* shorthand equivalents - the code should still compile after the 		
+* conversion.															
+* 																		
+* Copyright (C) 2012 - Riaan Van Rooyen & Johnathan Botha				
+*																		
+* This program is free software: you can redistribute it and/or modify	
+* it under the terms of the GNU General Public License as published by	
+* the Free Software Foundation, either version 3 of the License, or		
+* (at your option) any later version.									
+*																		
+* This program is distributed in the hope that it will be useful,		
+* but WITHOUT ANY WARRANTY; without even the implied warranty of		
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the			
+* GNU General Public License for more details.							
+* 																		
+* You should have received a copy of the GNU General Public License		
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.	
+* 																		
 ************************************************************************/
 
 import java.io.ByteArrayOutputStream;
