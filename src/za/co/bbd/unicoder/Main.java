@@ -43,9 +43,6 @@ public class Main {
 
 	public static void main(String... args) {
 
-		args = new String[] { "C:/lib/opencsv/opencsv-2.3",
-				"C:/lib/opencsv/opencsvbusted" };
-
 		if (args.length != 2) {
 
 			System.out
