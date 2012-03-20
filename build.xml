@@ -29,6 +29,7 @@
 			<fileset dir="${bin}" />
 			<zipfileset excludes="META-INF/*.SF" src="./lib/commons-io-2.1.jar" />
 		</jar>
+		<copy file="gplv3.txt" todir="${deploy}" />
 	</target>
 	<target name="clean" description="clean up">
 		<!-- Delete the ${bin} and ${deploy} directory trees -->
