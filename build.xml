@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="Unicoder" default="deploy" basedir=".">
+	<description>
+        Unicoder build and deploy script
+    </description>
+	<!-- set global properties for this build -->
+	<property name="src" location="src" />
+	<property name="bin" location="bin" />
+	<property name="deploy" location="deploy" />
+	<target name="init">
+		<!-- Create the time stamp -->
+		<tstamp />
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${bin}" />
+	</target>
+	<target name="compile" depends="init" description="compile the source ">
+		<!-- Compile the java code from ${src} into ${build} -->
+		<javac includeantruntime="false" srcdir="${src}" destdir="${bin}" />
+	</target>
+	<target name="deploy" depends="compile" description="generate the distribution">
+		<!-- Create the distribution directory -->
+		<mkdir dir="${deploy}" />
+		<!-- Put everything in ${bin} into the Unicoder-${DSTAMP}.jar file -->
+		<jar jarfile="${deploy}/Unicoder-${DSTAMP}.jar" filesetmanifest="mergewithoutmain" basedir="${bin}">
+			<manifest>
+				<attribute name="Main-Class" value="za.co.bbd.unicoder.Main" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="${bin}" />
+			<zipfileset excludes="META-INF/*.SF" src="./lib/commons-io-2.1.jar" />
+		</jar>
+	</target>
+	<target name="clean" description="clean up">
+		<!-- Delete the ${bin} and ${deploy} directory trees -->
+		<delete dir="${build}" />
+		<delete dir="${deploy}" />
+	</target>
+</project>
